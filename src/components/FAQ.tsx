@@ -32,28 +32,29 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-20 bg-[#364A22]">
+    <section className="py-12 sm:py-16 md:py-20 bg-[#364A22]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 px-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-white/80 max-w-2xl mx-auto px-4">
             Everything you need to know about SARIRA Fig Malt
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden transition-all duration-300 hover:bg-white/15"
+              className="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden transition-all duration-300 hover:bg-white/15 animate-fade-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none"
+                className="w-full px-4 sm:px-6 py-4 text-left flex items-center justify-between focus:outline-none min-h-[60px] touch-manipulation"
               >
-                <h3 className="text-lg font-semibold text-white pr-4">
+                <h3 className="text-base sm:text-lg font-semibold text-white pr-4">
                   {faq.question}
                 </h3>
                 <div className="text-[#E38A30] flex-shrink-0">
@@ -66,9 +67,9 @@ const FAQ = () => {
               </button>
               
               {openIndex === index && (
-                <div className="px-6 pb-4">
+                <div className="px-4 sm:px-6 pb-4">
                   <div className="border-t border-white/20 pt-4">
-                    <p className="text-white/90 leading-relaxed">
+                    <p className="text-white/90 leading-relaxed text-sm sm:text-base">
                       {faq.answer}
                     </p>
                   </div>
@@ -78,11 +79,11 @@ const FAQ = () => {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-8 sm:mt-12 text-center">
           <p className="text-white/80 mb-4">
             Still have questions?
           </p>
-          <a href="#support" className="inline-block bg-[#E38A30] hover:bg-[#E38A30]/90 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
+          <a href="#support" className="inline-block bg-[#E38A30] hover:bg-[#E38A30]/90 text-white px-6 sm:px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 min-h-[48px] touch-manipulation flex items-center justify-center">
             View Support Center
           </a>
         </div>

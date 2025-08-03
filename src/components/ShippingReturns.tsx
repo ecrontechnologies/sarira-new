@@ -36,70 +36,70 @@ const ShippingReturns = () => {
   ];
 
   return (
-    <section id="support" className="py-20 bg-gray-50">
+    <section id="support" className="py-12 sm:py-16 md:py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#364A22] mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#364A22] mb-4 px-4">
             Support Center
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
             Everything you need to know about SARIRA Fig Malt - policies, FAQs, and support
           </p>
         </div>
 
         {/* Quick Access Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 mb-12 sm:mb-16">
           <button
             onClick={() => toggleSection('shipping')}
-            className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-[#E38A30]"
+            className="bg-white rounded-2xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-[#E38A30] min-h-[120px] touch-manipulation"
           >
             <Truck className="w-8 h-8 text-[#E38A30] mx-auto mb-3" />
-            <h3 className="text-lg font-semibold text-[#364A22] mb-2">Shipping & Delivery</h3>
+            <h3 className="text-base sm:text-lg font-semibold text-[#364A22] mb-2">Shipping & Delivery</h3>
             <p className="text-gray-600 text-sm">Coverage, charges & timelines</p>
           </button>
 
           <button
             onClick={() => toggleSection('returns')}
-            className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-[#E38A30]"
+            className="bg-white rounded-2xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-[#E38A30] min-h-[120px] touch-manipulation"
           >
             <RotateCcw className="w-8 h-8 text-[#E38A30] mx-auto mb-3" />
-            <h3 className="text-lg font-semibold text-[#364A22] mb-2">Returns & Refunds</h3>
+            <h3 className="text-base sm:text-lg font-semibold text-[#364A22] mb-2">Returns & Refunds</h3>
             <p className="text-gray-600 text-sm">Return policy & process</p>
           </button>
 
           <button
             onClick={() => toggleSection('privacy')}
-            className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-[#E38A30]"
+            className="bg-white rounded-2xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-[#E38A30] min-h-[120px] touch-manipulation"
           >
             <Shield className="w-8 h-8 text-[#E38A30] mx-auto mb-3" />
-            <h3 className="text-lg font-semibold text-[#364A22] mb-2">Privacy Policy</h3>
+            <h3 className="text-base sm:text-lg font-semibold text-[#364A22] mb-2">Privacy Policy</h3>
             <p className="text-gray-600 text-sm">How we protect your data</p>
           </button>
 
           <button
             onClick={() => toggleSection('terms')}
-            className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-[#E38A30]"
+            className="bg-white rounded-2xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-[#E38A30] min-h-[120px] touch-manipulation"
           >
             <FileText className="w-8 h-8 text-[#E38A30] mx-auto mb-3" />
-            <h3 className="text-lg font-semibold text-[#364A22] mb-2">Terms of Service</h3>
+            <h3 className="text-base sm:text-lg font-semibold text-[#364A22] mb-2">Terms of Service</h3>
             <p className="text-gray-600 text-sm">Terms & conditions</p>
           </button>
 
           <button
             onClick={() => toggleSection('faqs')}
-            className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-[#E38A30]"
+            className="bg-white rounded-2xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-[#E38A30] min-h-[120px] touch-manipulation"
           >
             <HelpCircle className="w-8 h-8 text-[#E38A30] mx-auto mb-3" />
-            <h3 className="text-lg font-semibold text-[#364A22] mb-2">FAQs</h3>
+            <h3 className="text-base sm:text-lg font-semibold text-[#364A22] mb-2">FAQs</h3>
             <p className="text-gray-600 text-sm">Common questions</p>
           </button>
         </div>
 
         {/* Expandable Sections */}
         {activeSection && (
-          <div className="bg-white rounded-2xl shadow-lg p-8 mb-16">
+          <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-8 mb-12 sm:mb-16 animate-fade-in">
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-2xl font-bold text-[#364A22]">
+              <h3 className="text-xl sm:text-2xl font-bold text-[#364A22] pr-4">
                 {activeSection === 'shipping' && 'Shipping & Delivery Policy'}
                 {activeSection === 'returns' && 'Returns & Refunds Policy'}
                 {activeSection === 'privacy' && 'Privacy Policy'}
@@ -108,20 +108,20 @@ const ShippingReturns = () => {
               </h3>
               <button
                 onClick={() => setActiveSection(null)}
-                className="text-gray-500 hover:text-[#E38A30] transition-colors duration-300"
+                className="text-gray-500 hover:text-[#E38A30] transition-colors duration-300 p-2 -m-2 touch-manipulation"
               >
                 <ChevronUp className="w-6 h-6" />
               </button>
             </div>
 
             {activeSection === 'shipping' && (
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6 text-sm sm:text-base">
                 <div>
-                  <h4 className="text-lg font-semibold text-[#364A22] mb-3 flex items-center">
+                  <h4 className="text-base sm:text-lg font-semibold text-[#364A22] mb-3 flex items-start sm:items-center">
                     <span className="w-8 h-8 bg-[#E38A30] text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">1</span>
                     Shipping Coverage & Charges
                   </h4>
-                  <div className="ml-11 space-y-2 text-gray-700">
+                  <div className="ml-11 space-y-2 text-gray-700 text-sm sm:text-base">
                     <p>• We deliver across India (local areas in Tamil Nadu included), excluding certain remote regions.</p>
                     <p>• <strong className="text-[#E38A30]">Free shipping on prepaid orders above ₹800.</strong></p>
                     <p>• For orders below ₹800, delivery charges vary by location.</p>
@@ -129,33 +129,33 @@ const ShippingReturns = () => {
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-semibold text-[#364A22] mb-3 flex items-center">
+                  <h4 className="text-base sm:text-lg font-semibold text-[#364A22] mb-3 flex items-start sm:items-center">
                     <span className="w-8 h-8 bg-[#E38A30] text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">2</span>
                     Order Processing Time
                   </h4>
-                  <div className="ml-11 space-y-2 text-gray-700">
+                  <div className="ml-11 space-y-2 text-gray-700 text-sm sm:text-base">
                     <p>• Orders placed before 5 PM are processed within 1 business day.</p>
                     <p>• Weekends & public holidays are not processing days.</p>
                   </div>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-semibold text-[#364A22] mb-3 flex items-center">
+                  <h4 className="text-base sm:text-lg font-semibold text-[#364A22] mb-3 flex items-start sm:items-center">
                     <span className="w-8 h-8 bg-[#E38A30] text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">3</span>
                     Delivery Timeline
                   </h4>
-                  <div className="ml-11 space-y-2 text-gray-700">
+                  <div className="ml-11 space-y-2 text-gray-700 text-sm sm:text-base">
                     <p>• <strong>Estimated delivery: 6 – 10 working days</strong> across India, depending on your location.</p>
                     <p>• Courier tracking via email or SMS provided at dispatch.</p>
                   </div>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-semibold text-[#364A22] mb-3 flex items-center">
+                  <h4 className="text-base sm:text-lg font-semibold text-[#364A22] mb-3 flex items-start sm:items-center">
                     <span className="w-8 h-8 bg-[#E38A30] text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">4</span>
                     Failed Deliveries or Erroneous Address
                   </h4>
-                  <div className="ml-11 space-y-2 text-gray-700">
+                  <div className="ml-11 space-y-2 text-gray-700 text-sm sm:text-base">
                     <p>• Customers are responsible for reshipping fees if the order is returned due to incomplete or incorrect address.</p>
                     <p>• SARIRA is not liable for lost packages from address errors.</p>
                   </div>
@@ -163,7 +163,7 @@ const ShippingReturns = () => {
 
                 <div className="bg-[#E38A30]/10 border-l-4 border-[#E38A30] p-4 rounded-r-lg">
                   <h4 className="font-semibold text-[#364A22] mb-2">Order Cancellation & Refund</h4>
-                  <p className="text-gray-700">
+                  <p className="text-gray-700 text-sm sm:text-base">
                     If the order is cancelled before dispatch or cannot be delivered to your location, we issue a 
                     <strong className="text-[#364A22]"> full refund—including shipping charges—within 48 business hours</strong> of processing.
                   </p>
@@ -681,16 +681,17 @@ const ShippingReturns = () => {
           </div>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {policies.map((policy, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              className="bg-white rounded-2xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="text-[#E38A30] mb-4 flex justify-center">
                 {policy.icon}
               </div>
-              <h3 className="text-xl font-semibold text-[#364A22] mb-2">
+              <h3 className="text-lg sm:text-xl font-semibold text-[#364A22] mb-2">
                 {policy.title}
               </h3>
               <p className="text-gray-600 mb-3 text-sm">
@@ -703,15 +704,15 @@ const ShippingReturns = () => {
           ))}
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-200 text-center">
+        <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-gray-200 text-center">
           <p className="text-gray-600 mb-4">
             Need more help? Contact our support team
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:support@sarirawellness.com" className="bg-[#E38A30] hover:bg-[#E38A30]/90 text-white px-6 py-3 rounded-lg transition-colors duration-300 font-medium">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <a href="mailto:support@sarirawellness.com" className="bg-[#E38A30] hover:bg-[#E38A30]/90 text-white px-6 py-3 rounded-lg transition-colors duration-300 font-medium min-h-[48px] touch-manipulation flex items-center justify-center">
               📧 Email Support
             </a>
-            <a href="https://wa.me/91XXXXXXXXXX" className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg transition-colors duration-300 font-medium">
+            <a href="https://wa.me/91XXXXXXXXXX" className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg transition-colors duration-300 font-medium min-h-[48px] touch-manipulation flex items-center justify-center">
               💬 WhatsApp Chat
             </a>
           </div>
