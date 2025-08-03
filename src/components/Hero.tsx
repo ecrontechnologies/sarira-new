@@ -27,11 +27,6 @@ const Hero = () => {
             SARIRA
           </h1>
           
-          {/* Product Description */}
-          <div className="text-2xl md:text-3xl font-semibold text-[#E38A30] mb-4">
-            Fig Malt
-          </div>
-          
           <div className="text-lg text-white/80 mb-6">
             with Organic Figs & Premium Nuts
           </div>
